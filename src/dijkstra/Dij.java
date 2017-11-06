@@ -37,6 +37,18 @@ public class Dij {
         vertices[s.getIndice()].chave = 0;
     }
     
+    public void Relax(Vertice u, Vertice v, int w){
+        if(v.d > (u.d + w)){
+            vertices[v.getIndice()].d = u.d + w;
+            vertices[v.getIndice()].chave = u.d + w;
+            vertices[v.getIndice()].PI = u; 
+            vet[v.getIndice()] = vertices[v.getIndice()].chave;
+            //v.d = u.d + w;
+            //v.PI = u;
+        }
+        //vet[v.getIndice()] = vertices[v.getIndice()].chave;
+    }
+    
     public int[] getVet(){
         return vet;
     }
