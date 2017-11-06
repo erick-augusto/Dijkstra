@@ -20,7 +20,26 @@ public class Dij {
         Arco[][] matAdj = g.getMatrizDeAdjacencia();
         //int cont = 0;
         FilaDePrioridade Q = new FilaDePrioridade(vertices);
-        
+        while(!Q.filaVazia()){
+            Vertice u = Q.extraiMinimo();           
+            //System.out.println("u.d:"+u.d);
+            //int l = vertices.length;
+            String nome = u.getNome();
+            //System.out.println("u:"+nome);
+            int d = u.d;
+            //vet[cont] = d;
+            for (i = 0; i < vertices.length; i++) {
+                Arco a = matAdj[u.getIndice()][i];
+                if (a != null) {
+                    String v = a.getDestino().getNome();
+                    int p = a.getPeso();
+                    Relax(u,a.getDestino(),a.getPeso());
+                }
+            }
+            //System.out.print(vet[cont]+" ");
+            //cont++;
+        }
+        //System.out.println();
     }
     
     public void Initialize_Single_Source(Grafo g, Vertice s){
