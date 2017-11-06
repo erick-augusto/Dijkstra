@@ -18,6 +18,8 @@ public class Dij {
         
         int i;
         Arco[][] matAdj = g.getMatrizDeAdjacencia();
+        //int cont = 0;
+        FilaDePrioridade Q = new FilaDePrioridade(vertices);
         
     }
     
@@ -33,5 +35,9 @@ public class Dij {
         String nome = s.getNome();
         vertices[s.getIndice()].d = 0;
         vertices[s.getIndice()].chave = 0;
+    }
+    
+    public int[] getVet(){
+        return vet;
     }
 }
