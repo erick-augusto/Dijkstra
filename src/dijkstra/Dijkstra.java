@@ -22,9 +22,9 @@ public class Dijkstra {
             vet = dijkstra.getVet();
             for (j = 0; j < n; j++){
                 distancias[g.vertices[i].getIndice()][j] = vet[j];
-                System.out.print(distancias[i][j]+" ");
+                //System.out.print(distancias[i][j]+" ");
             }
-            System.out.println();
+            //System.out.println();
         }
 
         //Impressão da matriz de distâncias
