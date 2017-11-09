@@ -13,6 +13,7 @@ public class Dijkstra {
         int[] vet = new int[n];
         int i, j;
         
-        
+        g.imprimeNaTela();
+
     }
 }
